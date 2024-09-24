@@ -26,7 +26,9 @@ export const TodoItem = ({
         />
       </td>
       <td>
-        <button onClick={() => deleteTodo(id)}>Удалить</button>
+        <button className="common-btn" onClick={() => deleteTodo(id)}>
+          Удалить
+        </button>
       </td>
     </tr>
   );

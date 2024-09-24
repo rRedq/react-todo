@@ -26,6 +26,10 @@ export const AddNewProfile = ({ addNewUser }: Props) => {
     };
     addNewUser(data);
 
+    clearValues();
+  };
+
+  const clearValues = (): void => {
     setName('');
     setLastName('');
     setUsername('');
@@ -33,7 +37,11 @@ export const AddNewProfile = ({ addNewUser }: Props) => {
   };
 
   if (!showForm) {
-    return <button onClick={() => setShowForm(true)}>Добавить профиль</button>;
+    return (
+      <button onClick={() => setShowForm(true)} className="common-btn">
+        Добавить профиль
+      </button>
+    );
   }
   return (
     <form className={style.form} onSubmit={onSubmit}>
@@ -43,6 +51,7 @@ export const AddNewProfile = ({ addNewUser }: Props) => {
         required
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        className="common-input"
       />
       <input
         type="text"
@@ -50,6 +59,7 @@ export const AddNewProfile = ({ addNewUser }: Props) => {
         required
         value={name}
         onChange={(e) => setName(e.target.value)}
+        className="common-input"
       />
       <input
         type="text"
@@ -57,8 +67,16 @@ export const AddNewProfile = ({ addNewUser }: Props) => {
         required
         value={lastName}
         onChange={(e) => setLastName(e.target.value)}
+        className="common-input"
       />
-      <button type="submit">Добавить</button>
+      <div style={{ display: 'flex', gap: '10px' }}>
+        <button type="submit" className="common-btn">
+          Добавить
+        </button>
+        <button className="common-btn" onClick={clearValues}>
+          Отменить
+        </button>
+      </div>
     </form>
   );
 };

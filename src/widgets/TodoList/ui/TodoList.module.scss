@@ -2,6 +2,10 @@
 
 .todoList {
   @include flex($flexDirection: column, $alignItems: center);
+
+  form {
+    @include flex($gap: 10px);
+  }
 }
 
 .table {

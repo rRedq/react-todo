@@ -1,7 +1,7 @@
 @import '../../app/styles/common.scss';
 
 .main {
-  @include flex($flexDirection: column);
+  @include flex($flexDirection: column, $alignItems: center);
   min-height: 100vh;
   background: var(--deep-grey);
   padding: 1%;

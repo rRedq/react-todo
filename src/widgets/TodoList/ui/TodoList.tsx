@@ -28,8 +28,11 @@ export const TodoList = ({ todoList }: Props) => {
           type="text"
           value={todoText}
           onChange={(e) => setTodoText(e.target.value)}
+          className="common-input"
         />
-        <button type="submit">Добавить туду</button>
+        <button type="submit" className="common-btn">
+          Добавить задачу
+        </button>
       </form>
       <table className={style.table}>
         <thead>

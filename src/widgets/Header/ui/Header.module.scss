@@ -10,3 +10,8 @@
   color: var(--red);
   font-weight: bold;
 }
+
+.active {
+  @extend .link;
+  color: var(--blue);
+}

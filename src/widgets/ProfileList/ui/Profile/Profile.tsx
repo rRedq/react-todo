@@ -18,14 +18,19 @@ export const Profile = ({ user }: Props) => {
   };
 
   return (
-    <tr
-      className={`${style.profile} ${isActiveUser ? style.active : null}`}
-      onClick={setActiveProfile}
-    >
-      <td>{username}</td>
-      <td>{`${firstName} ${lastName}`}</td>
+    <tr>
+      <td className={isActiveUser ? style.active : null}>{username}</td>
+      <td className={isActiveUser ? style.active : null}>
+        {`${firstName} ${lastName}`}
+      </td>
       <td>
-        <button disabled={isActiveUser}>Выбрать</button>
+        <button
+          className="common-btn"
+          disabled={isActiveUser}
+          onClick={setActiveProfile}
+        >
+          Выбрать
+        </button>
       </td>
     </tr>
   );

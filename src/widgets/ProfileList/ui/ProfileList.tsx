@@ -36,14 +36,14 @@ export const ProfileList = () => {
 
   return (
     <>
-      <AddNewProfile addNewUser={addNewUser} />
       <div className={style.profileList}>
+        <AddNewProfile addNewUser={addNewUser} />
         <table className={style.table}>
           <thead>
             <tr>
               <th>username</th>
               <th>name</th>
-              <th>Actions</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
