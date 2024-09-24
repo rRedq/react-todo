@@ -1,0 +1,12 @@
+@import '../../../app/styles/common.scss';
+
+.header {
+  @include flex(center, 20px);
+  border-bottom: 1px solid var(--main-color-1);
+  padding: 1% 0;
+}
+
+.link {
+  color: var(--red);
+  font-weight: bold;
+}

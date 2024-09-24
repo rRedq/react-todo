@@ -1,0 +1,11 @@
+@import '../../app/styles/common.scss';
+
+.todoPage {
+  @include flex(
+    center,
+    $flexDirection: column,
+    $alignItems: center,
+    $flexGrow: 1,
+    $gap: 20px
+  );
+}

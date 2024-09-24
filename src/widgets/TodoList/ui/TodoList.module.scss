@@ -1,0 +1,11 @@
+@import '../../../app/styles/common.scss';
+
+.todoList {
+  @include flex($flexDirection: column, $alignItems: center);
+}
+
+.table {
+  max-width: 1000px;
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}

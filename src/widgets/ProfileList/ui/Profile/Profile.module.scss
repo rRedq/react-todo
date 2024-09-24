@@ -1,0 +1,15 @@
+.profile {
+  &:hover:not(.active) {
+    cursor: pointer;
+    color: var(--red);
+  }
+
+  button:disabled {
+    opacity: 0.5;
+  }
+}
+
+.active {
+  color: var(--blue);
+  pointer-events: none;
+}

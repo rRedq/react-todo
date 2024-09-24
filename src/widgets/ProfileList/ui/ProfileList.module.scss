@@ -1,0 +1,17 @@
+@import '../../../app/styles/common.scss';
+
+.profileList {
+  @include flex(
+    center,
+    $flexDirection: column,
+    $alignItems: center,
+    $flexGrow: 1,
+    $gap: 10px
+  );
+}
+
+.table {
+  max-width: 1500px;
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}

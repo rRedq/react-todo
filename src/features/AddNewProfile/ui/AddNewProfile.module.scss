@@ -1,0 +1,11 @@
+@import '../../../app/styles/common.scss';
+
+.form {
+  @include flex($flexDirection: column, $alignItems: center, $gap: 10px);
+
+  input {
+    width: 250px;
+    padding: 5px;
+    border-radius: 4px;
+  }
+}

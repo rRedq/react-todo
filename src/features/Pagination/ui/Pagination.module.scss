@@ -1,0 +1,25 @@
+@import '../../../app/styles/common.scss';
+
+.pagination {
+  @include flex($gap: 10px);
+}
+
+.btn {
+  border: 1px solid var(--main-color-1);
+  padding: 5px 8px;
+  min-width: 10px;
+  border-radius: 4px;
+  text-align: center;
+
+  &:hover:not(.active) {
+    cursor: pointer;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+  }
+}
+
+.active {
+  @extend .btn;
+  color: var(--red);
+  border: 1px solid var(--red);
+}
